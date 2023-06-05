@@ -52,8 +52,8 @@ def index():
     path = os.path.join(os.getcwd(), "sample.json")   
     os.remove(path)
 
-    print(path)
-    return(jsonify(miDoc))
+    #print(path)
+    return(jsonify({"Exitoso":True}))
 
 def upload(truncated_pan, connection_string, container_name):  
     container_client = ContainerClient.from_connection_string(connection_string, container_name) 
